@@ -9,6 +9,7 @@ if the path uses i edges
     
     OPT(i, v) = min {OPT(i-1, x) + w(x, v)}
 
+Running time O(mn)
 """
 
 
