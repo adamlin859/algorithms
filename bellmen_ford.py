@@ -24,14 +24,25 @@ def bellmen_ford(V, E, w, s):
     dp[(0, s)] = 0
 
     for i in range(1, n):
+        # detection negative cycle and stoping 
+        no_change = True 
+
         for v in V:
             min_dist = dp[i - 1, v]
             for x in V:
                 if v in E[x]:
+
                     dist = dp[i - 1, x] + w[(x, v)]
                     if min_dist > dist:
+                        no_change = False
                         min_dist = dist
             dp[i, v] = min_dist
+
+        
+        
+        if no_change:
+            break
+
 
     print(dp)
 
