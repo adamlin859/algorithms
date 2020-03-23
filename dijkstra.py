@@ -69,8 +69,45 @@ def dijkstra_v2(V, E, w, s):
     print(dist)
 
 
+"""
+Key idea: using a priority queue implemented as a binary min-heap: store 
+vertex u with key dist[u]. 
 
+Running time O(n log n )
 
+Need more time to think about
+"""
+# def dijkstra_v3(V, E, w, s):
+#     # initaliztion 
+#     dist = []
+#     for v in V:
+#         if v != s:
+#             dist.append((float("inf"), v))
+#         else:
+#             dist.append((0, v))
+#         prev[v] = None
+    
+#     heapify(x)
+    
+#     S = set()
+
+#     while len(Q) != 0:
+#         u = 
+
+#         # pick u so that dist[u] is minimum among all nodes in V-S
+#         d_v = min([v for k, v in dist.items() if k in nodes])
+#         u = [key for key in nodes if dist[key] == d_v][0]
+
+#         S.add(u)
+
+#         for v in E[u]:
+#             # find a smaller edge to udate the original node
+#             if dist[v] > dist[u] +  w[(u, v)]:
+#                 dist[v] = dist[u] + w[(u, v)]
+#                 prev[v] = u 
+
+#     print(prev)
+#     print(dist)
 
 
 if __name__ == "__main__":
