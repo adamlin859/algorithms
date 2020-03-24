@@ -14,8 +14,8 @@ def kruskals(V, E):
 		u = edge[0]
 		v = edge[1]
 
-		u_set = find(u, trees)
-		v_set = find(v, trees)
+		u_set = find(u, trees) 
+		v_set = find(v, trees) 
 
 		if u_set != v_set:
 			E_t.add(edge)
