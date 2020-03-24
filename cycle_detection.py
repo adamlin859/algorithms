@@ -16,6 +16,8 @@ class detect_odd_cycle:
 			if self.explore[u] == 0:
 				self.search(u)
 
+		return False
+
 	def search(self, u):
 		self.previsit(u)
 		self.explore[u] = 1
